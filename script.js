@@ -134,4 +134,40 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleIcon.classList.replace('fa-moon', 'fa-sun');
         }
     });
+
+    // 3D Mouse Tracking for Static Project Images (like the Rover)
+    document.querySelectorAll('.project-visual').forEach(box => {
+        const img = box.querySelector('.project-img');
+        if (img) {
+            box.addEventListener('mousemove', (e) => {
+                const rect = box.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                // Calculate rotation based on mouse distance from center
+                const rotateX = ((y - centerY) / centerY) * -15; // Max 15 degree tilt
+                const rotateY = ((x - centerX) / centerX) * 15;
+                
+                // Disable the auto-float CSS animation while manually interacting
+                img.style.animation = 'none';
+                img.style.transition = 'none'; // Snappy tracking
+                img.style.transform = `scale(1.05) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            
+            box.addEventListener('mouseleave', () => {
+                // Smoothly reset back to normal
+                img.style.transition = 'transform 0.5s ease';
+                img.style.transform = `scale(0.9) rotateX(-5deg) rotateY(0deg)`;
+                
+                // Re-enable the CSS float animation after the transition finishes
+                setTimeout(() => {
+                    img.style.animation = 'float3d 8s ease-in-out infinite';
+                    img.style.transition = 'none'; 
+                }, 500);
+            });
+        }
+    });
 });

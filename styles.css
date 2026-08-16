@@ -609,11 +609,10 @@ footer {
 }
 
 /* Hide scrollbar globally for a cleaner mobile app feel */
-::-webkit-scrollbar {
-    display: none;
+* {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
 }
-
-body {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+*::-webkit-scrollbar {
+    display: none !important;
 }
