@@ -570,8 +570,31 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
-    .nav-links {
-        display: none;
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 5%;
     }
+    
+    .nav-links {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-socials {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
+/* Hide scrollbar globally for a cleaner mobile app feel */
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
