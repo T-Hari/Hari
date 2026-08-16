@@ -1,16 +1,14 @@
 # Hari Tanti | Mechatronics & Autonomous Systems Engineer
 
-> **Live Portfolio:** [https://t-hari.github.io/Hari.in/](https://t-hari.github.io/Hari.in/)
+> **Live Portfolio:** [https://t-hari.github.io/Hari/](https://t-hari.github.io/Hari/)
 
-A premium, interactive web portfolio designed to showcase my work in physical hardware engineering and autonomous software development.
+An interactive web portfolio designed to showcase my work in physical hardware engineering and autonomous software development.
 
 ## 🚀 Features
 
 *   **Interactive 3D CAD Models:** Integrated using Google's `<model-viewer>` component. Visitors can spin, zoom, and interact with the physical hardware I have designed (like robotic arms and drones) directly in the browser, perfectly integrated with the DOM.
 *   **Dynamic Theme Toggling:** A fully integrated Light/Dark mode that uses CSS variables, glassmorphic backgrounds, and advanced `mix-blend-mode` rules to ensure transparency and animations look perfect on any theme.
-*   **Apple-style Scroll Animation:** Utilizes the `IntersectionObserver` API to smoothly reveal sections as the user scrolls down the page.
 *   **Scramble Text Effect:** Custom Vanilla JavaScript effect that scrambles text upon page load for a cyber/tech-oriented aesthetic.
-*   **Glassmorphic UI:** Modern UI design utilizing backdrop filters and translucent backgrounds to simulate frosted glass.
 
 ## 🛠️ Tech Stack
 
