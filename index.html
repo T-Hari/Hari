@@ -1,32 +1,31 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hari Tanti | Mechatronics & Autonomous Systems</title>
     <meta name="description" content="Portfolio of Hari Tanti - Mechatronics Engineer, Robotics Specialist, and Autonomous Systems developer.">
-    <link rel="stylesheet" href="styles.css?v=10">
+    <link rel="stylesheet" href="styles.css?v=30">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- 3D Model Viewer Component -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body>
+
     <!-- Custom Cursor -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
-    <!-- Scroll Progress Bar -->
+    <!-- Scroll Progress -->
     <div class="scroll-progress"></div>
 
-    <!-- Ambient Particle Canvas -->
+    <!-- Ambient Particles -->
     <canvas id="particle-canvas"></canvas>
 
     <nav class="navbar reveal">
-        <div class="logo">Hari Tanti.</div>
+        <div class="logo">Hari<span>.</span></div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#projects">Work</a>
@@ -43,26 +42,72 @@
     </nav>
 
     <main class="container">
-        
-        <!-- Hero Section -->
+
+        <!-- ===== HERO ===== -->
         <section id="hero" class="hero">
+            <canvas id="hero-canvas"></canvas>
             <div class="hero-content">
-                <h1 class="headline reveal-up">
-                    <span class="scramble-text" data-value="Mechatronics.">Mechatronics.</span><br>
-                    <span class="scramble-text" data-value="Autonomy.">Autonomy.</span><br>
-                    <span class="scramble-text" data-value="Hardware.">Hardware.</span>
+                <div class="hero-name reveal-up">Hari Tanti —</div>
+                <h1 class="headline reveal-up delay-1">
+                    <span class="line"><span class="scramble-text" data-value="Mechatronics.">Mechatronics.</span></span>
+                    <span class="line"><span class="scramble-text" data-value="Autonomy.">Autonomy.</span></span>
+                    <span class="line"><span class="scramble-text" data-value="Hardware.">Hardware.</span></span>
                 </h1>
-                <p class="sub-headline reveal-up delay-1">Engineer. 4x Patent Holder. Autonomous Head at Deakin Robotics.</p>
+                <div class="typewriter-wrap reveal-up delay-2">
+                    <span class="typewriter-text"></span>
+                    <span class="typewriter-cursor"></span>
+                </div>
             </div>
         </section>
 
-        <!-- Bento Grid: About & Experience -->
+    </main>
+
+    <!-- ===== DIVIDER STRIP ===== -->
+    <div class="divider-strip">
+        <span>Mechatronics</span>
+        <span class="divider-line"></span>
+        <span>Autonomous Systems</span>
+        <span class="divider-line"></span>
+        <span>4&times; Patent Holder</span>
+        <span class="divider-line"></span>
+        <span>ROS2 &bull; SLAM &bull; C++</span>
+    </div>
+    </div>
+
+    <main class="container">
+
+        <!-- ===== STATS ===== -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <a href="#patents" class="stat-item reveal-up stat-link">
+                    <span class="stat-number" data-target="4" data-suffix="×">0×</span>
+                    <span class="stat-label">Patents Filed</span>
+                </a>
+                <a href="#projects" class="stat-item reveal-up delay-1 stat-link">
+                    <span class="stat-number" data-target="3" data-suffix="+">0+</span>
+                    <span class="stat-label">Major Projects</span>
+                </a>
+                <a href="#about" class="stat-item reveal-up delay-2 stat-link">
+                    <span class="stat-number" data-target="2" data-suffix="">0</span>
+                    <span class="stat-label">Universities</span>
+                </a>
+                
+            </div>
+        </section>
+
+        <!-- ===== BENTO: ABOUT ===== -->
         <section id="about" class="bento-section">
             <div class="bento-grid">
-                
-                <div class="bento-card span-2 reveal-up delay-1">
-                    <h3 class="card-title">Dual Perspective</h3>
-                    <p class="card-text">Currently a 3rd-year Mechatronics Engineering student undertaking a dual degree across Manipal Institute of Technology and Deakin University. Bridging theory with rigorous, self-directed hardware application.</p>
+
+                <div class="bento-card span-2 accent-stripe reveal-up delay-1 about-card">
+                    <div class="about-text">
+                        <h3 class="card-title">Hari Tanti</h3>
+                        <p class="card-subtitle">Mechatronics Engineer · Deakin &amp; MIT</p>
+                        <p class="card-text">3rd-year Mechatronics Engineering student undertaking a dual degree across Manipal Institute of Technology and Deakin University. Bridging theory with rigorous, self-directed hardware application.</p>
+                    </div>
+                    <div class="about-photo">
+                        <img src="assets/hari.jpg?v=2" alt="Hari Tanti">
+                    </div>
                 </div>
 
                 <div class="bento-card dark reveal-up delay-2">
@@ -101,62 +146,59 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- ===== PROJECTS ===== -->
         <section id="projects" class="work-section">
             <h2 class="section-title reveal-up">Selected Work.</h2>
-            
+
             <div class="project-list">
-                
-                <div class="project-row reveal-up">
-                    <div class="project-info">
+
+                <div class="project-panel reveal-up">
+                    <div class="project-panel-info">
+                        <p class="project-number">01 — Robotics</p>
                         <h3>Autonomous Rover Navigation</h3>
-                        <p>ROS2 • C++ • SLAM</p>
-                        <span class="project-desc">End-to-end development of an autonomous rover control system integrating Nav2, SLAM, and waypoint navigation for complex environments.</span>
+                        <p class="project-tech">ROS2 &bull; C++ &bull; SLAM</p>
+                        <p class="project-panel-desc">End-to-end development of an autonomous rover control system integrating Nav2, SLAM, and waypoint navigation for complex environments.</p>
                     </div>
-                    <div class="project-visual">
+                    <div class="project-panel-visual">
                         <img src="assets/rover.png" alt="Autonomous Rover" class="project-img">
                     </div>
                 </div>
 
-                <div class="project-row reverse reveal-up">
-                    <div class="project-info">
+                <div class="project-panel reverse reveal-up">
+                    <div class="project-panel-info">
+                        <p class="project-number">02 — Aerospace</p>
                         <h3>Custom Drone Fleet</h3>
-                        <p>Ansys • Carbon Fiber • CAD</p>
-                        <span class="project-desc">Designed, manufactured, and flew 10", 12", and 4.5" drone frames focusing on weight optimization, structural integrity, and high-thrust capacity.</span>
+                        <p class="project-tech">Ansys &bull; Carbon Fiber &bull; CAD</p>
+                        <p class="project-panel-desc">Designed, manufactured, and flew 10&quot;, 12&quot;, and 4.5&quot; drone frames focusing on weight optimization, structural integrity, and high-thrust capacity.</p>
                     </div>
-                    <div class="project-visual">
-                        <!-- 3D Viewer for Drone -->
-                        <model-viewer 
-                            src="assets/drone.glb" 
+                    <div class="project-panel-visual">
+                        <model-viewer
+                            src="assets/drone.glb"
                             alt="3D CAD model of custom drone fleet"
-                            auto-rotate 
-                            camera-controls 
+                            auto-rotate camera-controls
                             rotation-per-second="30deg"
                             interaction-prompt="auto"
-                            shadow-intensity="1"
-                            exposure="1.2">
+                            shadow-intensity="1" exposure="1.2">
                         </model-viewer>
                         <button class="model-reset-btn"><i class="fas fa-undo"></i> Reset View</button>
                     </div>
                 </div>
 
-                <div class="project-row reveal-up">
-                    <div class="project-info">
+                <div class="project-panel reveal-up">
+                    <div class="project-panel-info">
+                        <p class="project-number">03 — IoT</p>
                         <h3>4-DOF Robotic Arm</h3>
-                        <p>ESP32 • Python • IoT</p>
-                        <span class="project-desc">Engineered an end-to-end robotic arm utilizing an ESP32 microcontroller with a bespoke web-based portal for precision servo control.</span>
+                        <p class="project-tech">ESP32 &bull; Python &bull; IoT</p>
+                        <p class="project-panel-desc">Engineered an end-to-end robotic arm utilizing an ESP32 microcontroller with a bespoke web-based portal for precision servo control.</p>
                     </div>
-                    <div class="project-visual">
-                        <!-- 3D Viewer for Robotic Arm -->
-                        <model-viewer 
-                            src="assets/arm.glb?v=2" 
+                    <div class="project-panel-visual">
+                        <model-viewer
+                            src="assets/arm.glb?v=2"
                             alt="3D CAD model of 4-DOF robotic arm"
-                            auto-rotate 
-                            camera-controls 
+                            auto-rotate camera-controls
                             rotation-per-second="30deg"
                             interaction-prompt="auto"
-                            shadow-intensity="1"
-                            exposure="1.2">
+                            shadow-intensity="1" exposure="1.2">
                         </model-viewer>
                         <button class="model-reset-btn"><i class="fas fa-undo"></i> Reset View</button>
                     </div>
@@ -165,10 +207,10 @@
             </div>
         </section>
 
-        <!-- Patents Section -->
+        <!-- ===== PATENTS ===== -->
         <section id="patents" class="patents-section">
             <h2 class="section-title reveal-up">Intellectual Property.</h2>
-            
+
             <div class="bento-grid patents-grid">
                 <div class="bento-card thin reveal-up">
                     <h4>01</h4>
@@ -189,7 +231,7 @@
             </div>
         </section>
 
-        <!-- Footer -->
+        <!-- ===== FOOTER ===== -->
         <footer class="reveal-up">
             <div class="footer-content">
                 <div class="footer-left">
@@ -206,6 +248,33 @@
 
     </main>
 
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=15"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
