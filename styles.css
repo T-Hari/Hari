@@ -803,3 +803,31 @@ body::after {
 
 
 
+
+/* ============================================================
+   MOBILE FIXES
+   ============================================================ */
+@media (max-width: 768px) {
+    /* Hide Logo */
+    .logo { display: none !important; }
+
+    /* Fix 3-block stats grid layout */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stats-grid .stat-item:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    /* Fix wrapping on divider strip */
+    .divider-strip {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        scrollbar-width: none !important;
+        -webkit-overflow-scrolling: touch;
+    }
+    .divider-strip::-webkit-scrollbar {
+        display: none !important;
+    }
+}
