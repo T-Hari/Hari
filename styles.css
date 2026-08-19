@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    DESIGN TOKENS
    ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
@@ -434,9 +434,9 @@ h1, h2, h3, h4 {
 
 /* Card text */
 .card-title { font-size: 1.35rem; margin-bottom: 0.75rem; font-family: var(--font-heading); }
-.card-subtitle { color: var(--text-secondary); font-size: 0.78rem; margin-bottom: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
-.card-text { color: var(--text-secondary); font-size: 1rem; line-height: 1.65; }
-.card-text.small { font-size: 0.9rem; }
+.card-subtitle { color: var(--text-secondary); font-size: 0.78rem; margin-bottom: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; font-family: 'Nunito Sans', sans-serif; }
+.card-text { color: var(--text-secondary); font-size: 1rem; line-height: 1.65; font-family: 'Nunito Sans', sans-serif; }
+.card-text.small { font-size: 0.9rem; font-family: 'Nunito Sans', sans-serif; }
 .card-icon { font-size: 1.75rem; margin-bottom: 1.25rem; color: var(--accent); }
 
 /* Pills */
@@ -519,6 +519,7 @@ h1, h2, h3, h4 {
 .project-panel-desc {
     font-size: 1rem; color: var(--text-secondary);
     line-height: 1.7; max-width: 400px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .project-panel-visual {
@@ -564,7 +565,7 @@ model-viewer {
     transition: color 0.3s ease;
 }
 .bento-card.thin:hover h4 { color: var(--accent); }
-.bento-card.thin p { font-size: 0.9rem; margin: 0; line-height: 1.6; color: var(--text-secondary); padding-top: 0.3rem; }
+.bento-card.thin p { font-size: 0.9rem; margin: 0; line-height: 1.6; color: var(--text-secondary); padding-top: 0.3rem; font-family: 'Nunito Sans', sans-serif; }
 
 /* ============================================================
    FOOTER
