@@ -79,7 +79,7 @@ h1, h2, h3, h4 {
 .hero-name {
     font-family: var(--font-body);
     color: var(--accent);
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -199,7 +199,7 @@ h1, h2, h3, h4 {
 .typewriter-text {
     color: var(--accent);
     font-family: var(--font-heading);
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
     font-weight: 600;
 }
 .typewriter-cursor {
